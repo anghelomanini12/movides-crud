@@ -1,0 +1,81 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(38, 92%, 58%);
+  --first-color-light: hsl(38, 100%, 78%);
+  --first-color-alt: hsl(32, 75%, 50%);
+  --second-color: hsl(195, 75%, 52%);
+  --dark-color: hsl(212, 40%, 12%);
+  --white-color: hsl(212, 4%, 95%);
+  --body-color: hsl(212, 73%, 29%);
+  --container-color: hsl(212, 42%, 20%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* background-color: var(--container-color); */
+  font-family: var(--body-font);
+  color: var(--dark-color);
+}
+.slick-slide div {
+  display: flex;
+  justify-content: center;
+}
+.slick-prev:before,
+.slick-next:before {
+  background: #f39c12;
+  border-radius: 50%;
+  font-size: 35px;
+}
+.slick-dots li button:before {
+  color: rgb(179, 178, 178) !important;
+  font-size: 15px !important;
+  top: 2rem !important;
+}
+.slick-dots li.slick-active button:before {
+  color: orange !important;
+}
+.tags {
+  background-image: linear-gradient(
+      45deg,
+      #f39c12,
+      #f39c12 32px,
+      rgba(0, 0, 0, 0) 32px
+    ),
+    linear-gradient(135deg, #f39c12, #f39c12 32px, rgba(0, 0, 0, 0) 32px),
+    linear-gradient(135deg, #f39c12, #f39c12);
+  background-repeat: no-repeat;
+  background-position:
+    100% 100%,
+    100% 100%,
+    -32px 100%;
+  background-size:
+    48px 100%,
+    48px 100%,
+    100% 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .slick-slide div {
+    margin: 0 1rem;
+  }
+}
